@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+</head>
+<body>
+    <h1>Here are album details</h1>
+    <h2>{{ album.title }}</h2>
+    <p>{{ album.artist }}</p>
+    <p>{{ album.genre }}</p>
+    <a href="{% url 'edit_album' album.pk %}">Edit this entry</a>
+    <a href="{% url 'remove_album' album.pk %}">Remove this entry</a>
+</body>
+</html>

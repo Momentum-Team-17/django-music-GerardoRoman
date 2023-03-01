@@ -20,8 +20,12 @@ from albums import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('__debug__/', include('debug_toolbar.urls')),
-    path('', views.list_albums, name="home"),
-    path('albums/new', views.add_album, name="add_album"),
+    path('', views.list_albums, name='home'),
+    path('albums/new', views.add_album, name='add_album'),
+
+    path('albums/<int:pk>', views.album_details, name='album_details'),
+    path('albums/<int:pk>', views.edit_album, name='edit_album'),
+    path('albums/<pk>/remove', views.remove_album, name='remove_album'),
     # where user visits, what view is called,
     # name used within the app to refer to this url (page)
 ]

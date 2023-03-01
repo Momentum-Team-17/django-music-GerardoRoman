@@ -7,11 +7,11 @@
     <title>Add Album</title>
 </head>
 <body>
-    <h3>Adding Albums</h3>
+    <h3>Add Your Favorite Album Here</h3>
     <form method='post'>
         {% csrf_token %}
         {{ form.as_p }}
-        <button type='submit'>Submit</button>
+        <button type='submit'>Add</button>
     </form>
 </body>
 </html>
