@@ -8,7 +8,7 @@
 </head>
 <body>
     <h2>This form will edit the instance from the database with a pk of {{ pk }}</h2>
-    <form method='post'>
+    <form method='POST'>
         {% csrf_token %}
         {{ form.as_p }}
         <button type='submit'>Save</button>
