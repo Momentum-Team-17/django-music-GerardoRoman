@@ -43,4 +43,4 @@ def remove_album(request, pk):
     album = get_object_or_404(Album, pk=pk)
     if request.method == 'POST':
         album.delete()
-    return render(request, 'album, remove_album.html')
+    return render(request, 'albums/remove_album.html')
