@@ -35,8 +35,8 @@ def edit_album(request, pk):
         if edited_album.is_valid():
             edited_album.save()
             return redirect('home')
-        form = AlbumForm(instance=album)
-        return render(request, 'albums/edit_album.html', {'form': form, 'pk': pk})
+    form = AlbumForm(instance=album)
+    return render(request, 'albums/edit_album.html', {'form': form, 'pk': pk})
 
 
 def remove_album(request, pk):
