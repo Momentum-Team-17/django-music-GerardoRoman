@@ -10,7 +10,7 @@
     <h1>Favorite Albums</h1>
     <h2>Add your favorite album below</h2>
     {% for album in albums %}
-    <li><a href="{% url 'edit_album' album.pk %}">{{ album }}</a><li>
+    <li><a href="{% url 'album_details' album.pk %}">{{ album }}</a><li>
     {% endfor %}
     <a href="{% url 'add_album' %}">Add a new album</a>
 </body>
